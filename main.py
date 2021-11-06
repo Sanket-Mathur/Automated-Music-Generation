@@ -9,7 +9,7 @@ from tensorflow.keras import models
 SONGLEN = 1000
 
 # loading the saved model
-model = models.load_model('model_100')
+model = models.load_model('model_200')
 
 def sample(preds):
     # helper function to sample an index from a probability array
@@ -55,5 +55,4 @@ for i in range(SONGLEN):
     sentence = sentence[1:] + next_char
     generated += next_char
 
-print('\n\n')
 print(generated)
